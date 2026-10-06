@@ -12,7 +12,10 @@ export default function Footer() {
                             className="h-10 w-auto"
                         />
                         <p className="mt-5 max-w-md text-sm leading-7 text-emerald-50/75">
-                            The UAE’s premier destination for premium vaping products. We offer 100% authentic devices, exquisite e-liquids, and top-tier accessories with exceptional customer service.
+                            The UAE’s premier destination for premium vaping
+                            products. We offer 100% authentic devices, exquisite
+                            e-liquids, and top-tier accessories with exceptional
+                            customer service.
                         </p>
                     </div>
 
@@ -49,12 +52,18 @@ export default function Footer() {
                             Contact Us
                         </p>
                         <ul className="mt-4 space-y-3 text-sm text-emerald-50/75">
-                            <li>123 Vape Street, Downtown Dubai, United Arab Emirates</li>
+                            <li>
+                                123 Vape Street, Downtown Dubai, United Arab
+                                Emirates
+                            </li>
                             <li>+971 55 168 8299</li>
                             <li>support@vapemart.ae</li>
                         </ul>
                         <form className="mt-6">
-                            <label htmlFor="newsletter-email" className="text-sm font-bold uppercase tracking-[0.14em] text-white">
+                            <label
+                                htmlFor="newsletter-email"
+                                className="text-sm font-bold uppercase tracking-[0.14em] text-white"
+                            >
                                 Join Our Newsletter
                             </label>
                             <div className="mt-3 flex rounded-full border border-white/15 bg-white/10 p-1">
@@ -65,7 +74,11 @@ export default function Footer() {
                                     placeholder="Enter your email"
                                     className="min-w-0 flex-1 bg-transparent px-4 text-sm text-white outline-none placeholder:text-emerald-100/50"
                                 />
-                                <button type="submit" aria-label="Subscribe to newsletter" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-400 text-[#022c22] transition hover:bg-amber-300">
+                                <button
+                                    type="submit"
+                                    aria-label="Subscribe to newsletter"
+                                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-400 text-[#022c22] transition hover:bg-amber-300"
+                                >
                                     <span aria-hidden="true">→</span>
                                 </button>
                             </div>
@@ -77,7 +90,9 @@ export default function Footer() {
                     <p>© 2026 Vape Mart. All Rights Reserved.</p>
                     <div className="flex items-center gap-1">
                         <span>Designed with</span>
-                        <span className="text-rose-400" aria-label="love">♥</span>
+                        <span className="text-rose-400" aria-label="love">
+                            ♥
+                        </span>
                         <span>in UAE.</span>
                     </div>
                 </div>

@@ -3,7 +3,8 @@ import { CreditCard, ShieldCheck, Truck, Headphones } from "lucide-react";
 const benefits = [
     {
         title: "Free Shipping",
-        description: "Terms & conditions applied for free shipping and delivery",
+        description:
+            "Terms & conditions applied for free shipping and delivery",
         icon: Truck,
     },
     {
@@ -13,12 +14,14 @@ const benefits = [
     },
     {
         title: "1 Week Return",
-        description: "Your satisfaction is our priority: return any product within 1 week",
+        description:
+            "Your satisfaction is our priority: return any product within 1 week",
         icon: ShieldCheck,
     },
     {
         title: "Secure Payment",
-        description: "Seamless shopping backed by safe and secure payment options",
+        description:
+            "Seamless shopping backed by safe and secure payment options",
         icon: CreditCard,
     },
 ];

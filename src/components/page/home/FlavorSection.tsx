@@ -9,7 +9,8 @@ const flavors = [
         image: "strawberry.jpg",
         tag: "SIGNATURE BLEND",
         family: "LUSH ORCHARD & BERRIES",
-        description: "Sun-drenched California strawberries picked at peak ripeness, infused with delicate nectar sweetness and a subtle velvet finish.",
+        description:
+            "Sun-drenched California strawberries picked at peak ripeness, infused with delicate nectar sweetness and a subtle velvet finish.",
         notes: ["Sweet Strawberry", "Wild Berry Nectar", "Velvet Cream"],
         sweet: 5,
         ice: 1,
@@ -19,8 +20,13 @@ const flavors = [
         image: "watermelon.jpg",
         tag: "GLOBAL BEST SELLER",
         family: "ARCTIC FRUIT & MENTHOL",
-        description: "Crisp succulent red watermelon layered with crushed arctic glacier menthol for an exhilarating, refreshing finish.",
-        notes: ["Sweet Watermelon Rind", "Succulent Red Melon", "Alpine Glacier Freeze"],
+        description:
+            "Crisp succulent red watermelon layered with crushed arctic glacier menthol for an exhilarating, refreshing finish.",
+        notes: [
+            "Sweet Watermelon Rind",
+            "Succulent Red Melon",
+            "Alpine Glacier Freeze",
+        ],
         sweet: 4,
         ice: 5,
     },
@@ -29,8 +35,13 @@ const flavors = [
         image: "mint.jpg",
         tag: "ARCTIC HIT",
         family: "ARCTIC FROST & MENTHOL",
-        description: "Fresh garden spearmint leaves crushed over pure crystalline menthol, delivering crisp palate-cleansing coolness on every draw.",
-        notes: ["Fresh Garden Spearmint", "Peppermint Essence", "Crystal Menthol Chill"],
+        description:
+            "Fresh garden spearmint leaves crushed over pure crystalline menthol, delivering crisp palate-cleansing coolness on every draw.",
+        notes: [
+            "Fresh Garden Spearmint",
+            "Peppermint Essence",
+            "Crystal Menthol Chill",
+        ],
         sweet: 2,
         ice: 5,
     },
@@ -39,8 +50,13 @@ const flavors = [
         image: "peach.png",
         tag: "POPULAR PICK",
         family: "LUSH ORCHARD & BERRIES",
-        description: "Golden velvety Georgia peach nectar layered with delicate white blossom honey and a light, soothing vapor exhale.",
-        notes: ["Golden Peach Skin", "Velvety Peach Nectar", "Wild Blossom Honey"],
+        description:
+            "Golden velvety Georgia peach nectar layered with delicate white blossom honey and a light, soothing vapor exhale.",
+        notes: [
+            "Golden Peach Skin",
+            "Velvety Peach Nectar",
+            "Wild Blossom Honey",
+        ],
         sweet: 4,
         ice: 3,
     },
@@ -49,8 +65,13 @@ const flavors = [
         image: "grape.png",
         tag: "TRENDING",
         family: "LUSH ORCHARD & BERRIES",
-        description: "Deep vineyard Concord grapes bursting with natural tart sweetness, candied skin zest, and sparkling chilled vapor.",
-        notes: ["Concord Grape Skin", "Purple Grape Jam", "Chilled Soda Finish"],
+        description:
+            "Deep vineyard Concord grapes bursting with natural tart sweetness, candied skin zest, and sparkling chilled vapor.",
+        notes: [
+            "Concord Grape Skin",
+            "Purple Grape Jam",
+            "Chilled Soda Finish",
+        ],
         sweet: 4,
         ice: 4,
     },
@@ -59,8 +80,13 @@ const flavors = [
         image: "blueberry.png",
         tag: "TOP RATED",
         family: "ARCTIC FROST & MENTHOL",
-        description: "Plump wild forest blueberries chilled with a touch of crushed mountain snow and tart citrus undertones.",
-        notes: ["Fresh Wild Blueberries", "Tart Blackberry Juice", "Mountain Breeze Ice"],
+        description:
+            "Plump wild forest blueberries chilled with a touch of crushed mountain snow and tart citrus undertones.",
+        notes: [
+            "Fresh Wild Blueberries",
+            "Tart Blackberry Juice",
+            "Mountain Breeze Ice",
+        ],
         sweet: 3,
         ice: 4,
     },
@@ -69,8 +95,13 @@ const flavors = [
         image: "pineapple.png",
         tag: "ISLAND EXOTIC",
         family: "TROPICAL & CITRUS",
-        description: "Tangy sweet Maui golden pineapples dripping with sun-drenched island juice and cool coastal sea spray.",
-        notes: ["Tangy Pineapple Crown", "Golden Island Core", "Chilled Coconut Mist"],
+        description:
+            "Tangy sweet Maui golden pineapples dripping with sun-drenched island juice and cool coastal sea spray.",
+        notes: [
+            "Tangy Pineapple Crown",
+            "Golden Island Core",
+            "Chilled Coconut Mist",
+        ],
         sweet: 4,
         ice: 4,
     },
@@ -90,11 +121,16 @@ export default function FlavorSection() {
     }, [autoRotate]);
 
     const changeFlavor = (direction: number) => {
-        setActiveIndex((index) => (index + direction + flavors.length) % flavors.length);
+        setActiveIndex(
+            (index) => (index + direction + flavors.length) % flavors.length,
+        );
     };
 
     return (
-        <section id="flavors" className="relative mx-auto my-16 w-full max-w-[1380px] select-none px-4 sm:px-6 md:my-24">
+        <section
+            id="flavors"
+            className="relative mx-auto my-16 w-full max-w-[1380px] select-none px-4 sm:px-6 md:my-24"
+        >
             <header className="mb-6 flex flex-col items-center text-center sm:mb-10">
                 <p className="font-cinzel text-[11px] font-bold uppercase tracking-[0.25em] text-[#064e3b] sm:text-xs">
                     Taste the Extraordinary · 12 Artisan Blends
@@ -103,7 +139,8 @@ export default function FlavorSection() {
                     Signature Flavours
                 </h2>
                 <p className="mt-3 max-w-2xl text-xs leading-relaxed text-neutral-500 sm:text-sm">
-                    Rotate the artisan dial to explore hand-crafted tasting notes, sensory sweetness, and cooling ice profiles.
+                    Rotate the artisan dial to explore hand-crafted tasting
+                    notes, sensory sweetness, and cooling ice profiles.
                 </p>
             </header>
 
@@ -123,7 +160,9 @@ export default function FlavorSection() {
                 <div className="relative my-4 flex h-[280px] w-full max-w-[960px] items-center justify-center sm:h-[320px] md:h-[350px]">
                     <div className="absolute h-44 w-44 rounded-full border border-[#064e3b]/10 bg-white/60 shadow-[0_10px_40px_rgba(6,78,59,0.08)] sm:h-52 sm:w-52" />
                     {flavors.map((flavor, index) => {
-                        const angle = (index / flavors.length) * Math.PI * 2 - Math.PI / 2;
+                        const angle =
+                            (index / flavors.length) * Math.PI * 2 -
+                            Math.PI / 2;
                         const left = 50 + Math.cos(angle) * 39;
                         const top = 50 + Math.sin(angle) * 40;
                         const isActive = index === activeIndex;
@@ -138,7 +177,9 @@ export default function FlavorSection() {
                                 className={`absolute z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center transition-all duration-500 hover:scale-110 ${isActive ? "z-30 scale-110 opacity-100" : "opacity-75"}`}
                                 style={{ left: `${left}%`, top: `${top}%` }}
                             >
-                                <span className={`flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border-2 bg-white shadow-md sm:h-[72px] sm:w-[72px] ${isActive ? "border-[#d97706] ring-4 ring-amber-400/15" : "border-white"}`}>
+                                <span
+                                    className={`flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border-2 bg-white shadow-md sm:h-[72px] sm:w-[72px] ${isActive ? "border-[#d97706] ring-4 ring-amber-400/15" : "border-white"}`}
+                                >
                                     <img
                                         src={`https://vapmart.webestone.net/images/flavors/${flavor.image}`}
                                         alt=""
@@ -146,7 +187,9 @@ export default function FlavorSection() {
                                         loading="lazy"
                                     />
                                 </span>
-                                <span className={`mt-1 max-w-20 text-center text-[9px] font-bold leading-tight sm:max-w-28 sm:text-[10px] ${isActive ? "text-[#064e3b]" : "text-neutral-500"}`}>
+                                <span
+                                    className={`mt-1 max-w-20 text-center text-[9px] font-bold leading-tight sm:max-w-28 sm:text-[10px] ${isActive ? "text-[#064e3b]" : "text-neutral-500"}`}
+                                >
                                     {flavor.name}
                                 </span>
                             </button>
@@ -198,9 +241,15 @@ export default function FlavorSection() {
                         {activeFlavor.notes.map((note, index) => (
                             <div key={note} className="flex flex-col gap-1">
                                 <span className="font-bold uppercase tracking-wider text-[#064e3b]/60">
-                                    {index === 0 ? "Top Note" : index === 1 ? "Heart Note" : "Base Finish"}
+                                    {index === 0
+                                        ? "Top Note"
+                                        : index === 1
+                                          ? "Heart Note"
+                                          : "Base Finish"}
                                 </span>
-                                <span className="font-semibold text-[#064e3b]">{note}</span>
+                                <span className="font-semibold text-[#064e3b]">
+                                    {note}
+                                </span>
                             </div>
                         ))}
                     </div>

@@ -7,15 +7,24 @@ type CollectionsPageProps = {
     searchParams: Promise<{ category?: string }>;
 };
 
-export default async function CollectionsPage({ searchParams }: CollectionsPageProps) {
+export default async function CollectionsPage({
+    searchParams,
+}: CollectionsPageProps) {
     const { category } = await searchParams;
-    const initialCategory = productCategories.includes(category as (typeof productCategories)[number]) ? category : "All";
+    const initialCategory = productCategories.includes(
+        category as (typeof productCategories)[number],
+    )
+        ? category
+        : "All";
 
     return (
         <>
             <Header />
             <main>
-                <CollectionBrowser products={catalogProducts} initialCategory={initialCategory} />
+                <CollectionBrowser
+                    products={catalogProducts}
+                    initialCategory={initialCategory}
+                />
             </main>
             <Footer />
         </>

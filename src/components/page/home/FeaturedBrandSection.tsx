@@ -1,12 +1,42 @@
 import { ArrowRight, ShoppingCart } from "lucide-react";
 
 const featuredProducts = [
-    { name: "Al Fakher crown bar ultra 25000 puff 5mg in UAE", price: "Dhs. 45.00", previousPrice: "Dhs. 50.00", discount: "10% OFF" },
-    { name: "Al Fakher 30mg Salt Nicotine E Liquid 30ml in UAE", price: "Dhs. 35.00", previousPrice: "Dhs. 45.00", discount: "22% OFF" },
-    { name: "Al Fakher Crown Bar E Hose X 60000 puff 6mg vape", price: "Dhs. 55.00", previousPrice: "", discount: "15% OFF" },
-    { name: "Elf bar Ice King Pro 40k Puffs 50mg Disposable", price: "Dhs. 48.00", previousPrice: "Dhs. 50.00", discount: "4% OFF" },
-    { name: "Elf bar Raya D3 25k Puffs Disposable Vape 50mg", price: "Dhs. 45.00", previousPrice: "Dhs. 50.00", discount: "10% OFF" },
-    { name: "Waka Blade 50000 puffs 50mg Nicotine Adjustable", price: "Dhs. 50.00", previousPrice: "Dhs. 55.00", discount: "9% OFF" },
+    {
+        name: "Al Fakher crown bar ultra 25000 puff 5mg in UAE",
+        price: "Dhs. 45.00",
+        previousPrice: "Dhs. 50.00",
+        discount: "10% OFF",
+    },
+    {
+        name: "Al Fakher 30mg Salt Nicotine E Liquid 30ml in UAE",
+        price: "Dhs. 35.00",
+        previousPrice: "Dhs. 45.00",
+        discount: "22% OFF",
+    },
+    {
+        name: "Al Fakher Crown Bar E Hose X 60000 puff 6mg vape",
+        price: "Dhs. 55.00",
+        previousPrice: "",
+        discount: "15% OFF",
+    },
+    {
+        name: "Elf bar Ice King Pro 40k Puffs 50mg Disposable",
+        price: "Dhs. 48.00",
+        previousPrice: "Dhs. 50.00",
+        discount: "4% OFF",
+    },
+    {
+        name: "Elf bar Raya D3 25k Puffs Disposable Vape 50mg",
+        price: "Dhs. 45.00",
+        previousPrice: "Dhs. 50.00",
+        discount: "10% OFF",
+    },
+    {
+        name: "Waka Blade 50000 puffs 50mg Nicotine Adjustable",
+        price: "Dhs. 50.00",
+        previousPrice: "Dhs. 55.00",
+        discount: "9% OFF",
+    },
 ];
 
 export default function FeaturedBrandSection() {

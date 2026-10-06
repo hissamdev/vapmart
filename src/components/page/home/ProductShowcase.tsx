@@ -13,7 +13,9 @@ export default function ProductShowcase() {
             {collections.map((collection) => (
                 <section
                     key={collection.title}
-                    id={collection.title === "Best Selling" ? "shop" : undefined}
+                    id={
+                        collection.title === "Best Selling" ? "shop" : undefined
+                    }
                     className="best-selling-section relative mx-auto my-5 w-full max-w-[1440px] overflow-hidden px-3 py-7 transition-all duration-500 sm:px-6 sm:py-10 md:my-7 md:rounded-[36px] md:border md:border-emerald-700/60 md:bg-gradient-to-br md:from-[#064e3b] md:via-[#043e2e] md:to-[#022c22] md:p-10 md:pb-12 md:shadow-[0_24px_60px_-15px_rgba(6,78,59,0.34)] lg:my-9 lg:p-11 lg:pb-14"
                 >
                     <div className="pointer-events-none absolute -left-24 -top-24 hidden h-80 w-80 rounded-full bg-emerald-400/15 blur-[90px] md:block" />
@@ -61,7 +63,11 @@ export default function ProductShowcase() {
                                 </div>
                                 <div className="relative mx-auto my-0.5 flex aspect-square max-h-[235px] w-full items-center justify-center overflow-hidden p-2 sm:my-1 md:max-h-[255px]">
                                     <div className="relative h-full w-full transform transition-transform duration-500 ease-out group-hover:scale-105">
-                                        <Link href={`/products/${product.slug}`} className="block h-full w-full" aria-label={`View ${product.name}`}>
+                                        <Link
+                                            href={`/products/${product.slug}`}
+                                            className="block h-full w-full"
+                                            aria-label={`View ${product.name}`}
+                                        >
                                             <img
                                                 src={product.imageUrl}
                                                 alt={product.name}
@@ -77,26 +83,42 @@ export default function ProductShowcase() {
                                     </p>
                                 )}
                                 <h3 className="mb-2 line-clamp-2 min-h-10 text-xs font-bold leading-5 text-neutral-800 sm:text-sm">
-                                    <Link href={`/products/${product.slug}`} className="transition hover:text-[#064e3b]">{product.name}</Link>
+                                    <Link
+                                        href={`/products/${product.slug}`}
+                                        className="transition hover:text-[#064e3b]"
+                                    >
+                                        {product.name}
+                                    </Link>
                                 </h3>
                                 <div className="mb-3 flex items-center gap-1 text-[10px] text-neutral-500 sm:text-xs">
-                                    <Star size={12} className="fill-amber-400 text-amber-400" aria-hidden="true" />
+                                    <Star
+                                        size={12}
+                                        className="fill-amber-400 text-amber-400"
+                                        aria-hidden="true"
+                                    />
                                     <span>({product.rating})</span>
                                 </div>
                                 <div className="flex items-center justify-between gap-2">
-                                    <span className="text-sm font-extrabold text-[#064e3b] sm:text-base">{product.price}</span>
+                                    <span className="text-sm font-extrabold text-[#064e3b] sm:text-base">
+                                        {product.price}
+                                    </span>
                                     <button
                                         type="button"
                                         aria-label={`Add ${product.name} to cart`}
-                                        onClick={() => addItem({
-                                            id: product.slug,
-                                            name: product.name,
-                                            price: product.priceValue,
-                                            image: product.imageUrl,
-                                        })}
+                                        onClick={() =>
+                                            addItem({
+                                                id: product.slug,
+                                                name: product.name,
+                                                price: product.priceValue,
+                                                image: product.imageUrl,
+                                            })
+                                        }
                                         className="flex h-9 w-9 items-center justify-center rounded-full bg-[#064e3b] text-white transition-colors hover:bg-[#022c22]"
                                     >
-                                        <ShoppingCart size={15} aria-hidden="true" />
+                                        <ShoppingCart
+                                            size={15}
+                                            aria-hidden="true"
+                                        />
                                     </button>
                                 </div>
                             </article>

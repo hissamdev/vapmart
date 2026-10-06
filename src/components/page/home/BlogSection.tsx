@@ -69,7 +69,9 @@ export default function BlogSection() {
     }, [autoRotate]);
 
     const changeArticle = (direction: number) => {
-        setActiveIndex((index) => (index + direction + articles.length) % articles.length);
+        setActiveIndex(
+            (index) => (index + direction + articles.length) % articles.length,
+        );
     };
 
     return (
@@ -85,7 +87,8 @@ export default function BlogSection() {
                         Vape Culture &amp; Insights
                     </h2>
                     <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
-                        Immerse yourself in expert masterclasses, flavor science, and the latest vaping trends across UAE.
+                        Immerse yourself in expert masterclasses, flavor
+                        science, and the latest vaping trends across UAE.
                     </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -110,9 +113,11 @@ export default function BlogSection() {
                 {articles.map((article, index) => {
                     let offset = index - activeIndex;
                     if (offset > articles.length / 2) offset -= articles.length;
-                    if (offset < -articles.length / 2) offset += articles.length;
+                    if (offset < -articles.length / 2)
+                        offset += articles.length;
                     const distance = Math.abs(offset);
-                    const scale = distance === 0 ? 1 : distance === 1 ? 0.9 : 0.75;
+                    const scale =
+                        distance === 0 ? 1 : distance === 1 ? 0.9 : 0.75;
 
                     return (
                         <article
@@ -120,8 +125,18 @@ export default function BlogSection() {
                             aria-hidden={distance > 2}
                             className={`absolute left-1/2 top-1/2 flex h-[470px] w-[86vw] max-w-[340px] -translate-x-1/2 -translate-y-1/2 transform-gpu flex-col overflow-hidden rounded-[28px] bg-white transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] [backface-visibility:hidden] sm:h-[510px] sm:max-w-[390px] sm:rounded-[32px] md:h-[530px] md:max-w-[430px] ${distance === 0 ? "border-2 border-emerald-500/70 shadow-[0_20px_50px_rgba(6,78,59,0.18)] ring-4 ring-emerald-500/15" : "border border-neutral-200/90 shadow-[0_10px_28px_rgba(0,0,0,0.06)]"}`}
                             style={{
-                                zIndex: distance === 0 ? 30 : distance === 1 ? 20 : 0,
-                                opacity: distance > 1 ? 0 : distance === 1 ? 0.85 : 1,
+                                zIndex:
+                                    distance === 0
+                                        ? 30
+                                        : distance === 1
+                                          ? 20
+                                          : 0,
+                                opacity:
+                                    distance > 1
+                                        ? 0
+                                        : distance === 1
+                                          ? 0.85
+                                          : 1,
                                 pointerEvents: distance > 1 ? "none" : "auto",
                                 transform: `translateX(${offset * 70}%) translateY(${distance > 1 ? -80 : 0}px) rotateY(${offset * -15}deg) scale(${scale})`,
                             }}
@@ -145,7 +160,9 @@ export default function BlogSection() {
                                         <span>By {article.author}</span>
                                     </div>
                                     <p className="mb-2 font-cinzel text-[10px] font-bold uppercase tracking-[0.18em] text-[#064e3b]">
-                                        {index === 0 ? "Featured Article" : "Recommended"}
+                                        {index === 0
+                                            ? "Featured Article"
+                                            : "Recommended"}
                                     </p>
                                     <h3 className="mb-2 line-clamp-2 font-luxury text-base font-extrabold leading-snug text-neutral-900 sm:text-lg md:text-xl">
                                         {article.title}
@@ -156,10 +173,19 @@ export default function BlogSection() {
                                 </div>
                                 <div className="flex items-center justify-between border-t border-neutral-100 pt-4">
                                     <span className="font-cinzel text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-400">
-                                        Article {String(index + 1).padStart(2, "0")} / 05
+                                        Article{" "}
+                                        {String(index + 1).padStart(2, "0")} /
+                                        05
                                     </span>
-                                    <a href="#blog" className="text-sm font-bold text-[#064e3b] hover:text-[#022c22]">
-                                        Read Full Guide <ArrowRight size={14} className="ml-1 inline" />
+                                    <a
+                                        href="#blog"
+                                        className="text-sm font-bold text-[#064e3b] hover:text-[#022c22]"
+                                    >
+                                        Read Full Guide{" "}
+                                        <ArrowRight
+                                            size={14}
+                                            className="ml-1 inline"
+                                        />
                                     </a>
                                 </div>
                             </div>

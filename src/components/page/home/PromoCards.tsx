@@ -43,7 +43,9 @@ export default function PromoCards() {
                         <div className="relative z-10 flex h-full w-full flex-col justify-center p-6 pr-20 sm:w-2/3 sm:p-10 sm:pr-0 md:p-12">
                             <span
                                 className={`mb-1.5 font-cinzel text-xs font-extrabold uppercase tracking-[0.25em] sm:mb-2 sm:text-sm ${
-                                    isGreen ? "text-emerald-400" : "text-amber-200"
+                                    isGreen
+                                        ? "text-emerald-400"
+                                        : "text-amber-200"
                                 }`}
                             >
                                 {promotion.tag}
@@ -53,20 +55,28 @@ export default function PromoCards() {
                             </h2>
                             <p
                                 className={`mb-5 line-clamp-2 text-xs sm:mb-8 sm:text-sm ${
-                                    isGreen ? "text-emerald-100/80" : "text-amber-100/80"
+                                    isGreen
+                                        ? "text-emerald-100/80"
+                                        : "text-amber-100/80"
                                 }`}
                             >
                                 {promotion.description}
                             </p>
                             <Link
-                                href={isGreen ? "/collections?category=Pod%20Systems" : "/collections?category=Disposables"}
+                                href={
+                                    isGreen
+                                        ? "/collections?category=Pod%20Systems"
+                                        : "/collections?category=Disposables"
+                                }
                                 className={`group/button relative flex w-max items-center gap-2 overflow-hidden rounded-full bg-white px-5 py-2.5 pr-4 text-xs font-bold shadow-lg transition-all duration-300 hover:pr-6 sm:px-6 sm:py-3 sm:text-sm ${
                                     isGreen
                                         ? "text-[#064e3b] hover:bg-emerald-50"
                                         : "text-[#d97706] hover:bg-amber-50"
                                 }`}
                             >
-                                <span className="relative z-10">{promotion.action}</span>
+                                <span className="relative z-10">
+                                    {promotion.action}
+                                </span>
                                 <ArrowRight
                                     size={15}
                                     className="relative z-10 transition-transform duration-300 group-hover/button:translate-x-1"
@@ -74,7 +84,9 @@ export default function PromoCards() {
                                 />
                                 <span
                                     className={`pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent to-transparent transition-transform duration-700 group-hover/button:translate-x-full ${
-                                        isGreen ? "via-emerald-400/20" : "via-amber-400/20"
+                                        isGreen
+                                            ? "via-emerald-400/20"
+                                            : "via-amber-400/20"
                                     }`}
                                 />
                             </Link>

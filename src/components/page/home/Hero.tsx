@@ -43,7 +43,8 @@ export default function Hero() {
 
     const showPrevious = () => {
         setActiveSlide(
-            (current) => (current - 1 + carouselItems.length) % carouselItems.length,
+            (current) =>
+                (current - 1 + carouselItems.length) % carouselItems.length,
         );
     };
 
@@ -52,7 +53,8 @@ export default function Hero() {
     };
 
     useEffect(() => {
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            return;
 
         const interval = window.setInterval(() => {
             setActiveSlide((current) => (current + 1) % carouselItems.length);
@@ -102,7 +104,10 @@ export default function Hero() {
             <div className="absolute inset-0 z-20">
                 <div
                     className="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
-                    style={{ width: `${carouselItems.length * 100}%`, transform: `translateX(-${(activeSlide / carouselItems.length) * 100}%)` }}
+                    style={{
+                        width: `${carouselItems.length * 100}%`,
+                        transform: `translateX(-${(activeSlide / carouselItems.length) * 100}%)`,
+                    }}
                 >
                     {carouselItems.map((item, index) => (
                         <div
@@ -131,9 +136,14 @@ export default function Hero() {
                                     </p>
 
                                     <button className="group relative bg-white text-[#064e3b] px-7 py-3 sm:px-9 sm:py-4 rounded-full font-extrabold text-sm sm:text-base hover:bg-emerald-50 transition-all duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_40px_rgba(52,211,153,0.35)] flex items-center gap-2.5 sm:gap-3 overflow-hidden cursor-pointer">
-                                        <span className="relative z-10">Explore Collection</span>
+                                        <span className="relative z-10">
+                                            Explore Collection
+                                        </span>
                                         <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#064e3b] text-white flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:bg-[#022c22] transition-all">
-                                            <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                                            <ArrowRight
+                                                size={14}
+                                                className="group-hover:translate-x-0.5 transition-transform"
+                                            />
                                         </div>
                                         <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent pointer-events-none" />
                                     </button>
@@ -144,7 +154,9 @@ export default function Hero() {
                                         <img
                                             src={item.imageUrl}
                                             alt={`${item.heading} ${item.accent}`}
-                                            loading={index === 0 ? "eager" : "lazy"}
+                                            loading={
+                                                index === 0 ? "eager" : "lazy"
+                                            }
                                             className="absolute inset-0 h-full w-full object-cover transform group-hover/heroImg:scale-105 transition-transform duration-700 ease-out"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-[#022c22]/60 via-transparent to-transparent pointer-events-none" />
@@ -157,7 +169,10 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-40 flex gap-2 sm:gap-3" aria-label="Choose slide">
+            <div
+                className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-40 flex gap-2 sm:gap-3"
+                aria-label="Choose slide"
+            >
                 {carouselItems.map((item, index) => (
                     <button
                         key={item.heading}

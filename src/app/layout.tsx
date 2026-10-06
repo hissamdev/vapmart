@@ -23,7 +23,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     title: "Vape Mart | Premium E-Cigarettes & E-Liquids",
-    description: "Premium vape products, e-liquids, and accessories in Dubai and UAE.",
+    description:
+        "Premium vape products, e-liquids, and accessories in Dubai and UAE.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

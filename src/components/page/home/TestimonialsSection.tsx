@@ -6,48 +6,42 @@ const testimonials = [
         name: "John Doe",
         type: "Verified Buyer",
         title: "Super fast delivery & 100% authentic",
-        quote:
-            "Best vape store in Dubai! Delivery arrived within hours, and the scratch-off authenticity code checked out directly on the manufacturer's site.",
+        quote: "Best vape store in Dubai! Delivery arrived within hours, and the scratch-off authenticity code checked out directly on the manufacturer's site.",
     },
     {
         initials: "SM",
         name: "Sarah M.",
         type: "Verified Buyer",
         title: "Genuine products guaranteed",
-        quote:
-            "I've bought knock-offs from random stores before, but Vape Mart only delivers original factory-sealed products. Truly unmatched service.",
+        quote: "I've bought knock-offs from random stores before, but Vape Mart only delivers original factory-sealed products. Truly unmatched service.",
     },
     {
         initials: "AK",
         name: "Alex K.",
         type: "Verified Buyer",
         title: "Great flavor selection & support",
-        quote:
-            "Their premium collection is always in stock with fresh batches. Smooth checkout, great customer care, and unbeatable prices.",
+        quote: "Their premium collection is always in stock with fresh batches. Smooth checkout, great customer care, and unbeatable prices.",
     },
     {
         initials: "MN",
         name: "Mohammed Al-Nuaimi",
         type: "Verified Buyer",
         title: "Always fresh stock & fast WhatsApp response",
-        quote:
-            "Ordered TEREA and disposable kits multiple times. Delivery always on time and verified original seal. Customer service is 10/10.",
+        quote: "Ordered TEREA and disposable kits multiple times. Delivery always on time and verified original seal. Customer service is 10/10.",
     },
     {
         initials: "ER",
         name: "Elena Rostova",
         type: "Verified Buyer",
         title: "Best disposable vape deals in UAE",
-        quote:
-            "Authentic devices with authentic QR codes. Super responsive team, discreet delivery, and prices are better than physical shops.",
+        quote: "Authentic devices with authentic QR codes. Super responsive team, discreet delivery, and prices are better than physical shops.",
     },
     {
         initials: "TF",
         name: "Tariq Farooq",
         type: "Verified Buyer",
         title: "Flawless experience every single order",
-        quote:
-            "Top quality pod devices and pods. Packaging is tamper-proof with cold ice packs. Recommended to all my friends!",
+        quote: "Top quality pod devices and pods. Packaging is tamper-proof with cold ice packs. Recommended to all my friends!",
     },
 ];
 
@@ -66,7 +60,9 @@ export default function TestimonialsSection() {
                         Official Authorized Premium Retailer
                     </h2>
                     <p className="text-xs leading-relaxed text-emerald-100/80 sm:text-sm md:text-base">
-                        Directly partnered with global leaders to ensure 100% genuine hardware, verifiable security codes, and tamper-proof packaging.
+                        Directly partnered with global leaders to ensure 100%
+                        genuine hardware, verifiable security codes, and
+                        tamper-proof packaging.
                     </p>
                 </div>
 
@@ -83,54 +79,91 @@ export default function TestimonialsSection() {
                             ))}
                         </div>
                         <div>
-                            <p className="text-sm font-bold text-white">Trusted by 20,000+ Customers</p>
-                            <p className="text-xs text-emerald-100/70">Verified UAE &amp; GCC buyers</p>
+                            <p className="text-sm font-bold text-white">
+                                Trusted by 20,000+ Customers
+                            </p>
+                            <p className="text-xs text-emerald-100/70">
+                                Verified UAE &amp; GCC buyers
+                            </p>
                         </div>
                     </div>
                     <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/25 px-5 py-2.5 shadow-sm backdrop-blur-md">
-                        <div className="flex gap-1" aria-label="Rated five out of five">
+                        <div
+                            className="flex gap-1"
+                            aria-label="Rated five out of five"
+                        >
                             {Array.from({ length: 5 }).map((_, index) => (
-                                <Star key={index} size={15} className="fill-amber-400 text-amber-400" aria-hidden="true" />
+                                <Star
+                                    key={index}
+                                    size={15}
+                                    className="fill-amber-400 text-amber-400"
+                                    aria-hidden="true"
+                                />
                             ))}
                         </div>
-                        <span className="text-base font-black text-white">4.9 / 5</span>
-                        <span className="text-xs text-emerald-200/70">(1,200+ reviews)</span>
+                        <span className="text-base font-black text-white">
+                            4.9 / 5
+                        </span>
+                        <span className="text-xs text-emerald-200/70">
+                            (1,200+ reviews)
+                        </span>
                     </div>
                 </div>
 
                 <div className="mb-8 w-full overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
                     <div className="reviews-marquee-track flex w-max animate-[reviewsMarquee_34s_linear_infinite] gap-5 hover:[animation-play-state:paused]">
-                    {[...testimonials, ...testimonials].map(({ initials, name, type, title, quote }, index) => (
-                        <article
-                            key={`${name}-${index}`}
-                            aria-hidden={index >= testimonials.length}
-                            className="w-[300px] shrink-0 select-none rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-lg backdrop-blur-xl transition-all duration-300 hover:border-emerald-400/40 hover:bg-white/[0.12] sm:w-[360px] sm:p-6 md:w-[390px] flex flex-col justify-between"
-                        >
-                            <div>
-                                <div className="mb-3 flex items-start justify-between">
-                                    <div className="flex items-center gap-3">
-                                        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-emerald-400 to-teal-600 text-sm font-bold text-white shadow-inner">
-                                            {initials}
-                                        </span>
-                                        <div>
-                                            <h4 className="text-sm font-bold text-white">{name}</h4>
-                                            <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-emerald-400">
-                                                <BadgeCheck size={11} aria-hidden="true" />
-                                                {type}
-                                            </span>
+                        {[...testimonials, ...testimonials].map(
+                            ({ initials, name, type, title, quote }, index) => (
+                                <article
+                                    key={`${name}-${index}`}
+                                    aria-hidden={index >= testimonials.length}
+                                    className="w-[300px] shrink-0 select-none rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-lg backdrop-blur-xl transition-all duration-300 hover:border-emerald-400/40 hover:bg-white/[0.12] sm:w-[360px] sm:p-6 md:w-[390px] flex flex-col justify-between"
+                                >
+                                    <div>
+                                        <div className="mb-3 flex items-start justify-between">
+                                            <div className="flex items-center gap-3">
+                                                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-emerald-400 to-teal-600 text-sm font-bold text-white shadow-inner">
+                                                    {initials}
+                                                </span>
+                                                <div>
+                                                    <h4 className="text-sm font-bold text-white">
+                                                        {name}
+                                                    </h4>
+                                                    <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-emerald-400">
+                                                        <BadgeCheck
+                                                            size={11}
+                                                            aria-hidden="true"
+                                                        />
+                                                        {type}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex gap-0.5"
+                                                aria-label="Rated five out of five"
+                                            >
+                                                {Array.from({ length: 5 }).map(
+                                                    (_, starIndex) => (
+                                                        <Star
+                                                            key={starIndex}
+                                                            size={12}
+                                                            className="fill-amber-400 text-amber-400"
+                                                            aria-hidden="true"
+                                                        />
+                                                    ),
+                                                )}
+                                            </div>
                                         </div>
+                                        <h3 className="mb-1.5 text-sm font-semibold text-white/95">
+                                            {title}
+                                        </h3>
+                                        <p className="text-xs italic leading-relaxed text-emerald-100/75">
+                                            &ldquo;{quote}&rdquo;
+                                        </p>
                                     </div>
-                                    <div className="flex gap-0.5" aria-label="Rated five out of five">
-                                        {Array.from({ length: 5 }).map((_, starIndex) => (
-                                            <Star key={starIndex} size={12} className="fill-amber-400 text-amber-400" aria-hidden="true" />
-                                        ))}
-                                    </div>
-                                </div>
-                                <h3 className="mb-1.5 text-sm font-semibold text-white/95">{title}</h3>
-                                <p className="text-xs italic leading-relaxed text-emerald-100/75">&ldquo;{quote}&rdquo;</p>
-                            </div>
-                        </article>
-                    ))}
+                                </article>
+                            ),
+                        )}
                     </div>
                 </div>
 
@@ -142,11 +175,15 @@ export default function TestimonialsSection() {
                         "Original Brands Guaranteed",
                     ].map((benefit) => (
                         <div key={benefit} className="flex items-center gap-2">
-                            <BadgeCheck size={16} className="text-emerald-300" aria-hidden="true" />
+                            <BadgeCheck
+                                size={16}
+                                className="text-emerald-300"
+                                aria-hidden="true"
+                            />
                             <span>{benefit}</span>
                         </div>
                     ))}
-                    </div>
+                </div>
             </div>
         </section>
     );
