@@ -1,5 +1,19 @@
 # Vapmart
 
-Dev Limitations
+## Clone and run
 
-- Update image alt text for logo, note that the image is currently using an external url (https://vapmart.webestone.net/_next/image?url=%2Fvape-mart-text-logo-white.png&w=256&q=75)
+```bash
+git clone https://github.com/hissamdev/vapmart.git
+cd vapmart
+pnpm install
+pnpm dev
+```
+
+Open http://localhost:3000.
+
+## Routes
+
+- `/` — Home page
+- `/collections` — Filterable product catalog
+- `/collections?category=Disposables` — Catalog filtered by category. Also supports `Pod Systems`, `E-Liquids`, and `Heated Tobacco`.
+- `/products/[slug]` — Product details; slugs come from the catalog.
